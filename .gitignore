@@ -13,4 +13,4 @@ result.xml
 npm-debug.log
 
 # Environment.
-.env
+#.env
