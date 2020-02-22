@@ -9,7 +9,7 @@
     "frontend:development": "cross-env NODE_ENV=dev webpack-dev-server --progress --config webpack.config.development.js",
     "lint": "eslint *.js",
     "test": "node -c *.js",
-    "build": "node app.js webpack -p --progress --config webpack.config.build.js"
+    "build": "concurrently --kill-others \"npm run backend:build\" \"npm run frontend:build\""
   },
   "dependencies": {
     "body-parser": "~1.18.2",
