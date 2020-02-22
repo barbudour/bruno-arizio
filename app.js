@@ -18,8 +18,8 @@ const get = (results, request) => {
 
   const ua = parser(request.headers['user-agent'])
 
-  const functionals = find(results, { type: 'functionals' })
   const meta = find(results, { type: 'meta' })
+  const functionals = find(results, { type: 'functionals' })
   const navigation = find(results, { type: 'navigation' })
   const sharing = find(results, { type: 'sharing' })
   const social = find(results, { type: 'social' })
@@ -81,7 +81,7 @@ app.get('/', (request, response) => {
   })
 })
 
-app.get('/index', (request, response) => {
+app.get('/works', (request, response) => {
   request.prismic.api.query('', { pageSize : 100 }).then(({ results }) => {
     const index = find(results, { type: 'index' })
 
@@ -105,7 +105,7 @@ app.get('/about', (request, response) => {
   })
 })
 
-app.get('/essays', (request, response) => {
+app.get('/hire', (request, response) => {
   request.prismic.api.query('', { pageSize : 100 }).then(({ results }) => {
     const about = find(results, { type: 'about' })
     const essays = find(results, { type: 'essays' })
