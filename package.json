@@ -2,7 +2,7 @@
   "name": "bruno-arizio",
   "version": "1.0.0",
   "scripts": {
-    "start": "concurrently --kill-others \"npm run backend:build\" \"npm run frontend:build\""
+    "start": "concurrently --kill-others \"npm run backend:build\" \"npm run frontend:build\"",
     "backend:build": "node app.js",
     "backend:development": "nodemon app.js",
     "frontend:build": "webpack -p --progress --config webpack.config.build.js",
