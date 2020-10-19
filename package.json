@@ -2,14 +2,13 @@
   "name": "bruno-arizio",
   "version": "1.0.0",
   "scripts": {
-    "start": "concurrently --kill-others \"npm run backend:development\" \"npm run frontend:development\"",
+    "start": "concurrently --kill-others \"npm run backend:build\" \"npm run frontend:build\""
     "backend:build": "node app.js",
     "backend:development": "nodemon app.js",
     "frontend:build": "webpack -p --progress --config webpack.config.build.js",
     "frontend:development": "cross-env NODE_ENV=dev webpack-dev-server --progress --config webpack.config.development.js",
     "lint": "eslint *.js",
     "test": "node -c *.js",
-    "dev": "concurrently --kill-others \"npm run backend:build\" \"npm run frontend:build\""
   },
   "dependencies": {
     "body-parser": "~1.18.2",
